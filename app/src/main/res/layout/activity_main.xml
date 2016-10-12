@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="80dp">
+
+        <HorizontalScrollView
+            android:id="@+id/hsv_chart"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scrollbars="none">
+
+            <org.dsg.im.combinedchart.LineView
+                android:id="@+id/line_view"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp" />
+        </HorizontalScrollView>
+
+        <org.dsg.im.combinedchart.YAxisView
+            android:id="@+id/v_left_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/hsv_chart"
+            custom:type="left" />
+
+        <org.dsg.im.combinedchart.YAxisView
+            android:id="@+id/v_right_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/hsv_chart"
+            custom:type="right" />
+    </RelativeLayout>
+
+
+</LinearLayout>
